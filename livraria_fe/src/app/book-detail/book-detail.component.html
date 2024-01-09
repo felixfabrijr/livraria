@@ -1,1 +1,84 @@
-<p>book-detail works!</p>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .book-details-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .book-info {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="book-details-container">
+  <h2>Detalhes do Livro</h2>
+
+  <div class="book-info">
+    <label for="title"><Title></Title>:</label>
+    <p id="title">Book's name</p>
+  </div>
+
+  <div class="book-info">
+    <label for="author">Author:</label>
+    <p id="author">Author Name</p>
+  </div>
+
+  <div class="book-info">
+    <label for="isbn">ISBN code:</label>
+    <p id="isbn">123-456-789</p>
+  </div>
+
+  <div class="book-info">
+    <label for="date-added">Date Added to Library:</label>
+    <p id="date-added">01/01/2024</p>
+  </div>
+
+  <div class="book-info">
+    <label for="elimination-date">Elimination Date (if cancelled):</label>
+    <p id="elimination-date">N/A</p>
+  </div>
+
+  <div class="book-info">
+    <label for="plot">Plot:</label>
+    <p id="plot">Description of the book's plot.</p>
+  </div>
+
+  <div class="book-info">
+    <label for="letter-number">Complete Number of Letters:</label>
+    <p id="letter-number">N/A</p>
+  </div>
+
+</div>
+
+</body>
+</html>

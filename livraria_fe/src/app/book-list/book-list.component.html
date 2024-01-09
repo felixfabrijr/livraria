@@ -1,1 +1,95 @@
-<p>book-list works!</p>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookstore - Book Search</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .search-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .book-list {
+      margin-top: 20px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="search-container">
+  <h2>Book Search</h2>
+  <button onclick="buscarLivros()">Search</button>
+
+  <div class="book-list" id="book-list">
+    
+  </div>
+</div>
+
+<script>
+  function buscarLivros() {
+    
+    const livrosDisponiveis = [
+      { title: 'Book 1', author: 'Author 1', isbn: '123-456-7890' },
+      { title: 'Book 2', author: 'Author 2', isbn: '987-654-3210' },
+      { title: 'Book 3', author: 'Author 3', isbn: '456-789-0123' }
+      
+    ];
+
+    const bookListContainer = document.getElementById('book-list');
+    bookListContainer.innerHTML = '';
+
+    if (livrosDisponiveis.length === 0) {
+      bookListContainer.innerHTML = '<p>Nenhum livro encontrado.</p>';
+    } else {
+      const ul = document.createElement('ul');
+
+      livrosDisponiveis.forEach(livro => {
+        const li = document.createElement('li');
+        li.innerHTML = `<strong>${livro.title}</strong> - ${livro.author} (ISBN: ${livro.isbn})`;
+        ul.appendChild(li);
+      });
+
+      bookListContainer.appendChild(ul);
+    }
+  }
+</script>
+
+</body>
+</html>
